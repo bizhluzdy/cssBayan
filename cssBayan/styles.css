@@ -191,14 +191,6 @@
   /**
    * Correct the inability to style clickable types in iOS and Safari.
    */
-  
-  button,
-  [type="button"],
-  [type="reset"],
-  [type="submit"] {
-    -webkit-appearance: button;
-  }
-  
   /**
    * Remove the inner border and padding in Firefox.
    */
@@ -286,11 +278,7 @@
    * 1. Correct the odd appearance in Chrome and Safari.
    * 2. Correct the outline style in Safari.
    */
-  
-  [type="search"] {
-    -webkit-appearance: textfield; /* 1 */
-    outline-offset: -2px; /* 2 */
-  }
+
   
   /**
    * Remove the inner padding in Chrome and Safari on macOS.
@@ -357,6 +345,8 @@
     width: 80vw;
     background-color: #FEDB43;
     border-radius: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 
 }
 .back{
@@ -366,33 +356,80 @@
 .h1{
     font-family: 'Trebuchet MS', Helvetica, sans-serif;
     margin: 0 auto;
-    padding-top: 40px;
     margin-bottom: 40px;
     display: block;
     text-align: center;
 }
 
-.memes{
+.memes, .tab-title{
+    font-weight: bold; 
+    font-size: 20px;
     font-family: 'Trebuchet MS', Helvetica, sans-serif;
-    text-align: center;
+    margin: 0;
+    margin-left: 5%;
+}
+
+.sec, .tab-title{
+    width: 90%;
+    margin: 0 auto;
+
+    justify-content: space-between;
     padding-bottom: 20px;
     padding-top: 20px;
-    margin: 0;
-}
-
-.sec{
-    width: 80%;
-    margin: 0 auto;
-    
-    margin-top: 20px;
     border-top: 2px solid black;
-    cursor: pointer;
+    border-bottom: 2px;
+}
+.line{
+    background-color: black;
+    display: block;
+    position: relative;
+    top: 50%;
+    height: 2px;
+    width: 100%;
+}
+.cross{
+    margin-right: 5%;
+    height: 20px;
+    width: 20px;
+}
+.a{
+    rotate: 90deg;
+    top: 40%;
 }
 
-.pepe{
-    position:fixed;
-    height: 80px;
-    width: 80px;
-    left: 48%;
-    bottom: 0%;;
+.tab input{
+    display: none;
+}
+.tab-content img {
+    margin: 0 auto;
+    display: block;
+    width: 0;
+    height: 0;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.tab-title{
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+.tab-title:hover ~.tab-content img, .tab-content:hover .tab-content img{
+    margin: 0 auto;
+    margin-bottom: 20px;
+    display: block;
+    width: 35vw;
+    height: 100%;
+    opacity: 1;
+}
+
+
+
+.tab input:checked ~ .tab-content img{
+    margin: 0 auto;
+    margin-bottom: 20px;
+    display: block;
+    width: 35vw;
+    height: 100%;
+    opacity: 1;
 }
