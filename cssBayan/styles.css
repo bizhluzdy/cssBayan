@@ -33,7 +33,6 @@
 .h1{
     font-family: 'Trebuchet MS', Helvetica, sans-serif;
     margin: 0 auto;
-    margin-bottom: 5vh;
     display: block;
     text-align: center;
     font-size: 2em;
@@ -139,7 +138,9 @@
     margin-right: 2vw;
     margin-bottom: 2vh;
 }
-
+.bayan-wrap:hover > .tab input ~ label > .flexim > .cross{
+    opacity: 1;
+}
 @media screen and (max-width: 820px){
     .inact{
         color: black;
