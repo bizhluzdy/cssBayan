@@ -117,6 +117,9 @@
     height: 100%;
     opacity: 1;
 }
+.tab input:checked ~ .inact{
+    color: black;
+}
 
 .tab input:checked ~ label > .flexim > .cross{
     transform: rotate(0deg);
