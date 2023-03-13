@@ -1,0 +1,172 @@
+
+.inact{ 
+    color: rgba(0, 0, 0, 0.485);
+    transition: 0.3s;
+}
+.line{
+    opacity: 0;
+    transition: 0.3s;
+}
+.bayan-wrap:hover .line{
+    opacity: 1;
+}
+.bayan-wrap:hover .inact{
+    color: black;
+}
+.bayan-wrap{
+    margin: 0 auto;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    margin-left: 10vw;
+    width: 80vw;
+    background-color: #FEDB43;
+    border-radius: 3vb;
+    padding-top: 3vh;
+    padding-bottom: 5vh;
+}
+
+
+.back{
+    background-color: white;
+}
+
+.h1{
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    font-size: 2em;
+}
+
+.memes, .tab-title{
+    font-weight: bold; 
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    margin: 0;
+    margin-left: 5%;
+}
+
+.sec, .tab-title{
+    width: 90%;
+    margin: 0 auto;
+
+    
+}
+.line{
+    background-color: black;
+    display: block;
+    top: 50%;
+    height: 0.2vh;
+    width: 100%;
+}
+.cross{
+    align-self: center;
+    margin-left: 5%;
+    margin-right: 2vw;
+    height: 2vh;
+    transition: 0.3s;
+    transform: rotate(45deg);
+    opacity: 0;
+}
+.bayan-wrap:hover > div > label > div > img{
+    opacity: 1;
+}
+
+
+.tab input{
+    display: none;
+}
+.tab-content img {
+    margin: 0 auto;
+    display: block;
+    width: 0;
+    height: 0;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.tab-title{
+    cursor: pointer;
+    padding-left: 5%;
+}
+.tab-title:hover > .tab-content img,  .tab-content:hover img{
+    margin: 0 auto;
+    margin-bottom: 2vh;
+    display: block;
+    width: 35vw;
+    height: 100%;
+    opacity: 1;
+}
+
+.tab-title:hover > .flexim > .cross{
+    transform: rotate(0deg);
+}
+.tab-content:hover > .flexim > .cross{
+    transform: rotate(0deg);
+}
+
+.text{
+    margin: 0;
+    margin-left: 2vw;
+}
+
+.tab input:checked ~ label > .tab-content img{
+    margin: 0 auto;
+    margin-bottom: 2vh;
+    display: block;
+    width: 35vw;
+    height: 100%;
+    opacity: 1;
+}
+.tab input:checked ~ .inact{
+    color: black;
+}
+
+.tab input:checked ~ label > .flexim > .cross{
+    transform: rotate(0deg);
+}
+.tab-title{
+    font-size: 1.5em;
+}
+.h1{
+    font-size: 2em;
+}
+.flexim{
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 2vh;
+    border-top: 0.3vh solid black;
+    border-bottom: 1vh;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    margin-bottom: 2vh;
+}
+.bayan-wrap:hover > .tab input ~ label > .flexim > .cross{
+    opacity: 1;
+}
+@media screen and (max-width: 820px){
+    .inact{
+        color: black;
+    }
+    .tab-title{
+        font-size: 1.4em;
+    }
+    .h1{
+        font-size: 1.8em;
+    }
+    .line{
+        opacity: 1;
+    }
+    .cross{
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .tab-title{
+        font-size: 1.3em;
+    }
+    .h1{
+        font-size: 1.3em;
+    }
+}
